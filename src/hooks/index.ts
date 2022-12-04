@@ -1,1 +1,2 @@
-export * from './handleDesk'
+export * from './useHandleDesk'
+export * from './useHandleGame'
