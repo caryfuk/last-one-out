@@ -1,15 +1,15 @@
 import Styles from './Desk.module.css'
 
 type DeskProps = {
-  remaining: Array<string>
+  desk: string[]
 }
 
-export const Desk = ({ remaining }: DeskProps) => {
+export const Desk = ({ desk }: DeskProps) => {
   
   return (
     <div className={Styles.deskWrapper}>
     <div className={Styles.desk}>
-      {remaining.map((item, index) => (
+      {desk.map((item, index) => (
         <div key={index} className={Styles.item}>
           {item}
         </div>
