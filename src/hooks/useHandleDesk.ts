@@ -8,7 +8,7 @@ export const useHandleDesk = (): [ string[], (toBeRemoved?: number) => void ] =>
     desk,
     (toBeRemoved?: number) => {
       if (toBeRemoved) {
-        updateDesk(desk.slice(0, -toBeRemoved))
+        updateDesk(desk => desk.slice(0, -toBeRemoved))
       } else {
         updateDesk(randomDesk)
       }

@@ -1,4 +1,4 @@
-.desk {
+.root {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -7,10 +7,9 @@
   margin: 5vw;
   width: 50vw;
   height: 40vw;
+  position: relative;
 }
 
-.desk div {
-  width: 10vw;
-  height: 10vw;
+.root div {
   user-select: none;
 }
