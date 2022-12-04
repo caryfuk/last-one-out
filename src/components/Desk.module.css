@@ -2,14 +2,13 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  line-height: 10vw;
-  font-size: 7vw;
-  margin: 5vw;
-  width: 50vw;
-  height: 40vw;
+  line-height: 10vh;
+  font-size: 7vh;
+  margin: 5vh;
   position: relative;
 }
 
 .root div {
   user-select: none;
+  margin: 1vh;
 }

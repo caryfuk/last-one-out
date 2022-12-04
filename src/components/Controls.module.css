@@ -3,13 +3,23 @@
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  margin: 1vw;
+  margin: 1rem;
   position: relative;
 }
 
 .root button {
   margin: 0 1vw;
-  width: 5vw;
-  height: 5vw;
+  width: 4rem;
+  height: 4rem;
   cursor: pointer;
+  border-radius: 1rem;
+  border: 0;
+}
+
+.root button:hover {
+  background-color: #888;
+}
+
+.root button:active {
+  background-color: #000;
 }
