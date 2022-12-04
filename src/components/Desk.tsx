@@ -1,5 +1,4 @@
 import Styles from './Desk.module.css'
-import { useState } from 'react'
 
 type DeskProps = {
   remaining: Array<string>
