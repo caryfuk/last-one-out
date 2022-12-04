@@ -18,7 +18,7 @@ export const useHandleGame = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       if (!humanTurn && desk.length > 0) {
-        updateDesk(Math.floor(Math.random() * 3) + 1)
+        updateDesk(desk.length > 5 ? (desk.length % 3) + 1 : desk.length - 1)
       }
     }, 1000)
     return () => clearTimeout(timeout)
