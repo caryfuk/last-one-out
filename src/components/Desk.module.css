@@ -1,0 +1,19 @@
+.deskWrapper {
+  height: 40vw;
+}
+
+.desk {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  line-height: 10vw;
+  font-size: 7vw;
+  margin: 5vw;
+  width: 50vw;
+}
+
+.desk div {
+  width: 10vw;
+  height: 10vw;
+  user-select: none;
+}

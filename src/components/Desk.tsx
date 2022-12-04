@@ -1,13 +1,21 @@
 import Styles from './Desk.module.css'
+import { useState } from 'react'
 
 type DeskProps = {
-  remaining: number
+  remaining: Array<string>
 }
 
 export const Desk = ({ remaining }: DeskProps) => {
+  
   return (
-    <div className={Styles.root}>
-      {remaining}
+    <div className={Styles.deskWrapper}>
+    <div className={Styles.desk}>
+      {remaining.map((item, index) => (
+        <div key={index} className={Styles.item}>
+          {item}
+        </div>
+      ))}
+    </div>
     </div>
   )
 }

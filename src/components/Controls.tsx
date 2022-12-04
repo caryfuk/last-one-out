@@ -1,16 +1,16 @@
 import Styles from './Controls.module.css'
 
 type ControlsProps = {
-  remaining: number
-  setRemaining: (remaining: number) => void
+  remaining: Array<string>
+  setRemaining: (remaining: Array<string>) => void
 }
 
 export const Controls = ({ remaining, setRemaining }: ControlsProps) => {
   return (
     <div className={Styles.root}>
-      <button onClick={() => setRemaining(remaining - 1)}>1</button>
-      <button onClick={() => setRemaining(remaining - 2)}>2</button>
-      <button onClick={() => setRemaining(remaining - 3)}>3</button>
+      <button onClick={() => setRemaining(remaining.slice(0, -1))}>1</button>
+      <button onClick={() => setRemaining(remaining.slice(0, -2))}>2</button>
+      <button onClick={() => setRemaining(remaining.slice(0, -2))}>3</button>
     </div>
   )
 }
