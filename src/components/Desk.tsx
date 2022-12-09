@@ -32,9 +32,9 @@ const dropDownVariants = {
 export const Desk = ({ desk }: DeskProps) => (
   <div className={Styles.root}>
     <AnimatePresence initial={false}>
-      {desk.map((item) => (
+      {desk.map((item, index) => (
         <motion.div
-          key={item}
+          key={item+index}
           className={Styles.item}
           variants={dropDownVariants}
           initial="hidden"
