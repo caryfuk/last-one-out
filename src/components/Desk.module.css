@@ -12,3 +12,12 @@
   user-select: none;
   margin: 1vh;
 }
+
+@media only screen and (max-width: 768px) {
+  .root {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    line-height: 8vh;
+    font-size: 5vh;
+  }
+}
