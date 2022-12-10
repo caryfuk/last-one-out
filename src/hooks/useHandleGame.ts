@@ -15,13 +15,28 @@ export const useHandleGame = () => {
     setHumanTurn(Math.random() > 0.5)
   }
 
-  const turns1 = [0, 1, 1, 2, 3, 3]
-  const turns2 = [1, 1, 2, 3, 3]
+  const turn = (items: number, step: number) => {
+    updateDesk(items === step ? Math.floor(3 * Math.random()) + 1 : items - step)
+  }
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      if (!humanTurn && desk.length > 0) {
-        updateDesk(desk.length > 4 ? turns2[desk.length % 5] : turns1[desk.length])
+      const items = desk.length
+      if (!humanTurn) {
+        if (items >= 17) {
+          turn(items, 17)
+        }
+        else if (items >= 13) {
+          turn(items, 13)
+        }
+        else if (items >= 9) {
+          turn(items, 9)
+        }
+        else if (items >= 5) {
+          turn(items, 5)
+        } else {
+          turn(items, 1)
+        }
       }
     }, 1000)
     return () => clearTimeout(timeout)
